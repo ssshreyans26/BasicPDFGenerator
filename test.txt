@@ -1,0 +1,32 @@
+Person.findById(req.params.kittenId, (err, people) => {
+  if (err) return res.status(500).send(err)
+  var resumedetail = {}
+  resumedetail.First_Name= people.First_Name  
+  resumedetail.Last_Name= people.Last_Name   
+  resumedetail.Status_Designation= people.Status_Designation  
+  resumedetail.Mobile= people.Mobile 
+  resumedetail.Email= people.Email 
+  resumedetail.Profile_Summary= people.Profile_Summary
+  resumedetail.USN = people.USN
+  resumedetail.DOB = people.DOB 
+  resumedetail.Gender= people.Gender
+  resumedetail.Mother_Name= people.Mother_Name 
+  resumedetail.Father_Name= people.Father_Name 
+  resumedetail.Spoken_Languages= people.Spoken_Languages
+  resumedetail.Written_Languages= people.Written_Languages
+  resumedetail.Present_Address= people.Present_Address
+  resumedetail.Permanent_Address= people.Permanent_Address
+  resumedetail.PAN_No= people.PAN_No
+  resumedetail.Passport_No= people.Passport_No 
+  resumedetail.Aadhaar_No= people.Aadhaar_No
+  resumedetail.Career_Objective= people.Career_Objective 
+  resumedetail.Academic_Qualification= people.Academic_Qualification
+  resumedetail.Internship = people.Internship
+  resumedetail.Awards_and_Certification = people.Awards_and_Certification
+  resumedetail.Projects = people.Projects
+  resumedetail.Teachnical_Skill = people.Teachnical_Skill
+  resumedetail.Hobbies = people.Hobbies
+  resumedetail.Additional_info = people.Additional_info
+  return res.status(200).send(people)
+
+});
